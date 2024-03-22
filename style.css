@@ -1,0 +1,806 @@
+/* reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    list-style: none;
+    outline: none;
+    border: none;
+    text-decoration: none;
+  }
+  
+/* root */
+:root {
+    --white: #f2edea;
+    --orange: #ff4800;
+    --black: #212121;
+    --blackbg: #131313;
+    --blackshadow: rgba(0, 0, 0, 1);
+    --text-150: 14px;
+    --text-200: 20px;
+    --text-300: 30px;
+    --text-400: 150px;
+    --h1: 50px;
+    --h2: 30px;
+}
+  
+/* style */
+body {
+  font-family: 'GT Planar VF', sans-serif;
+  overflow: hidden;
+  cursor: url('img/cursor.png'), auto;
+}
+
+a:hover {
+    cursor: url('img/pointer.png'), pointer !important;
+}
+
+.regia {
+    font-size: var(--text-200);
+    font-weight: 800;
+}
+  
+.home-section {
+  background-size: 101vw;
+  background-image: url('img/Sfondi/03_messy_crazy_world_sfumata.jpg');
+  /* Aggiungi altre regole di stile se necessario */
+  background-repeat: no-repeat;
+}
+  
+/* Stili CSS del menu */
+.list {
+    top: 0;
+    width: 100%;
+    position: fixed;
+    padding: 30px;
+    background-color: var(--black);
+    z-index: 10;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+  
+.list .voice {
+    color: var(--white);
+    font-size: var(--text-200);
+    padding: 0 20px;
+    font-weight: 400;
+}
+
+.list .voice:hover {
+    color: var(--orange);
+}
+
+.list .logovoice img {
+    width: 6vw;
+    height: auto;
+}
+
+.list .logovoice {
+    display: block;
+    height: 100%;
+}
+  
+/* .list .logoNone {
+    display: none;
+}
+
+.list .logoBlock {
+    display: block;
+} */
+
+/* Stili CSS delle sezioni */
+ul {
+    list-style: none;
+}
+
+.section {
+    opacity: 1;
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 0;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.3s ease;
+}
+
+.section.back-section {
+    z-index: 1;
+}
+
+.section.active {
+    z-index: 2;
+    opacity: 1;
+    animation: slideSection 2s ease;
+}
+  
+@keyframes slideSection {
+    0% {
+        display: none;
+    }
+    100% {
+        display: block;
+    }
+}
+
+.hidden {
+    display: none !important;
+}
+
+.main {
+    margin-top: 7vh;
+}
+
+.main .maincontainer {
+  margin-left: 3vw;
+}
+
+.main h1 {
+    color: var(--orange);
+    font-weight: 600;
+    font-size: 55px;
+}
+
+.main .homedescription {
+    font-size: var(--text-200);
+    color: var(--white);
+    width: 800px;
+    margin-top: 20px;
+}
+
+.button {
+    margin-top: 40px;
+}
+
+.maincontent {
+  margin-top: 10vh;
+  display: flex;
+}
+
+.maincontent .homedescription {
+  width: 50vw;
+}
+
+.maincontent .maindesc {
+  margin-left: 3vw;
+}
+
+.diaryitems img {
+    border-radius: 10px;
+}
+
+.button a {
+    background-color: var(--orange);
+    color: var(--black);
+    font-size: 25px;
+    font-weight: 600;
+    padding: 15px 50px;
+    border-radius: 10px;
+}
+
+.button a i {
+    padding: 0 10px;
+}
+
+.button a:hover {
+    opacity: 70%;
+}
+
+/* slider */
+.episode-title {
+    font-size: var(--text-200);
+    color: var(--white);
+    font-weight: 500;
+    margin: 1vh 0;
+}
+
+.epdescription {
+    font-size: var(--text-150);
+    color: var(--white);
+    font-weight: 400;
+    margin-bottom: 3vh;
+    height: 80px;
+}
+
+.image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.image img {
+    border-radius: 10px;
+}
+
+.slider {
+    display: flex;
+}
+  
+/* Stile generale della card */
+.card-episode {
+    margin-top: 70px;
+    margin-right: 20px;
+    max-width: 18vw;
+}
+
+/* Stile dell'anteprima video nella card */
+.preview {
+    width: 100%;
+    height: auto;
+}
+
+/* Stile del pulsante play nella card */
+.start {
+    font-size: 24px;
+    color: var(--white);
+    cursor: pointer;
+    position: absolute;
+    z-index: 100;
+}
+
+.image .start-none {
+    display: none;
+}
+
+.image .start-block {
+    display: block;
+}
+
+.start:hover {
+    color: var(--black);
+}
+  
+/* Stile della popup video */
+.video-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 10000;
+}
+
+.openpopup {
+    display: flex;
+}
+
+.video-popup-inner {
+    background: var(--black);
+    padding: 20px;
+    border-radius: 10px;
+    width: 40%;
+}
+  
+/* Stile del pulsante di chiusura della popup */
+.video-popup-close {
+    font-size: 24px;
+    color: var(--white);
+    z-index: 1000;
+    align-self: end;
+    cursor: url('img/pointer.png'), pointer;
+}
+
+.video-popup-close:hover {
+    animation: closerotate 0.5s ease-in-out;
+}
+
+@keyframes closerotate {
+    0% {transform: rotate(0deg);}
+    0% {transform: rotate(90deg);}
+}
+
+.video-popup-body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px;
+}
+  
+/* .video-popup-body {
+    margin: 30px 10px 0 10px;
+} */
+
+/* Stile del video nella popup */
+/* .pp-thumbnail {
+    width: 100%;
+    height: auto;
+    margin-top: 10px;
+    margin: 10px;
+} */
+
+/* Stile delle informazioni del video nella popup */
+.video-popup-info {
+    /* margin-bottom: 40px; */
+    width: auto;
+}
+
+.video-popup-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.video-popup-content .button {
+    margin-top: 0;
+}
+  
+/* Altri stili specifici del tuo layout */
+/* .video-body {
+    Stili specifici della tua struttura
+} */
+  
+.details-title {
+    /* Stili specifici della tua struttura */
+    color: var(--white);
+    font-size: var(--text-300);
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.details-description {
+    /* Stili specifici della tua struttura */
+    color: var(--white);
+    font-size: var(--text-200);
+    font-weight: 400;
+    text-align: center;
+}
+
+.video {
+    display: none;
+}
+
+.button-none {
+    display: none;
+}
+
+.image a {
+    display: inline;
+}
+  
+/* .buttonpopup
+ */
+/* slider */
+  
+.footer {
+    width: 100%;
+    margin: 20px 0 0 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 50px 50px;
+}
+
+.footer .socials a {
+    color: var(--white);
+}
+
+.footer .socials a {
+    padding: 0 10px;
+    font-weight: 400;
+    font-size: var(--text-200);
+}
+
+.footer .socials a:hover {
+    color: var(--orange);
+}
+
+.footer .privacy span {
+    padding: 0 20px;
+    color: var(--white);
+    font-weight: 400;
+    font-size: var(--text-200);
+}
+
+.footer .privacy span:hover {
+    color: var(--orange);
+    cursor: url('img/pointer.png'), pointer;
+}
+  
+/* film */
+/* .diary {
+    background-color: var(--black);
+    color: var(--white);
+} */
+
+.bold {
+  width: 50vw;
+  font-weight: 800;
+  font-size: var(--text-300);
+}
+
+.diary .container {
+  margin-top: 25vh;
+}
+
+.diaryprimeandmo h3 {
+  margin-left: 3vw;
+  margin-top: 10vh;
+  display: flex;
+  height: 20vh;
+  align-items: flex-end;
+}
+/* meta */
+
+.diary {
+    background-image: url('img/Sfondi/01\ diario\ di\ bordo\ sfumata.jpg');
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-size: 101vw;
+}
+
+.diary .container .cover {
+    height: 550px;
+    width: 520px;
+    background-image: url('img/Diario/coverdiary.webp');
+}
+
+.meta {
+    background-image: url('img/Sfondi/02\ meta2024\ sfumata.jpg');
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-size: 101vw;
+}
+
+.coverdiary {
+    width: -webkit-fill-available;
+    border-radius: 10px;
+}
+
+.modal-content {
+    border-radius: 10px;
+}
+
+.diary .movie-item img {
+    width: 300px;
+    height: auto;
+}
+
+.meta .container .cover {
+    background-image: url('img/Meta24/Meta24.webp');
+}
+
+.home .maincontainer .cover {
+    background-image: url('img/MCW/MessyCrazyWorld.webp');
+}
+
+.metacontentblock {
+    display: none;
+}
+
+.metacontent .block {
+    display: block;
+}
+
+.meta .metatitle {
+    margin-left: 3vw;
+    display: flex;
+    height: 20vh;
+    align-items: flex-end;
+}
+
+  
+/* .team, .identity {
+    background-color: var(--blackbg);
+} */
+
+/* .pippo {
+    height: 100vh;
+    width: 100vw;
+} */
+
+/* .diary {
+    background-size: 100vw 250vh;
+    background-repeat: no-repeat;
+} */
+
+.container {
+    display: flex;
+    height: 65vh;
+    align-items: center;
+    margin-left: 3vw;
+}
+
+.meta .container {
+    height: 84vh;
+}
+  
+.container-content {
+    /* margin: 120px 0 8vh 50px; */
+    display: flex;
+    flex-direction: row;
+}
+
+.cast {
+    width: 50vw;
+    font-size: var(--text-200);
+}
+  
+.section .cover {
+    width: 382px;
+    height: 400px;
+    background-image: url(/img/Backstage/backstage-07.jpg);
+    background-size: cover;
+    border-radius: 10px;
+    background-position: center center;
+}
+
+.details {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    margin-left: 30px;
+}
+
+.title {
+    font-size: var(--h1);
+    color: var(--orange);
+}
+  
+.section .description {
+    margin-top: 20px;
+    color: var(--white);
+    font-size: var(--text-200);
+    width: 50vw;
+}
+
+.rates {
+    margin-top: 20px;
+}
+
+.rates .star {
+    color: var(--white);
+    font-size: var(--text-300);
+    margin-right: 10px;
+}
+  
+/*   .read-more {
+      color: var(--orange);
+      font-size: var(--text-300);
+      cursor: pointer;
+  } */
+
+/*   .not-visible {
+      display: none;
+  }
+  
+  .visible {
+      display: block;
+  } */
+  
+.credits {
+    margin-top: 30px;
+    color: var(--white);
+    font-size: var(--text-300);
+}
+
+.identity img {
+    width: 101vw;
+    height: auto;
+}
+  
+.identity {
+    background-color: var(--black);
+}
+  
+.showdescription {
+    font-size: var(--text-150);
+    font-weight: 800;
+    color: var(--white);
+    border: 1px solid var(--white);
+    /* background-color: var(--orange); */
+    padding: 15px;
+    border-radius: 10px;
+}
+  
+.showdescription:hover {
+    border: 1px solid var(--orange);
+    color: var(--orange);
+}
+  
+.line {
+    content: '';
+    width: 100%;
+    height: 1px;
+    background-color: var(--white);
+    display: block;
+    margin-bottom: 10px;
+}
+
+/*   @media screen and (max-width: 1920px) {
+    .container {
+        width: 80vh;
+    }
+    .meta .container {
+        width: 100vh;
+    }
+  } */
+
+.meta .footer {
+    margin: 0;
+}
+
+.epcontainer {
+    max-width: 100vw;
+    max-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.epcontainer .epslider, .epcontainer .epvideo {
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.epcontainer .epbuttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    width: 100vw;
+}
+
+.epbuttons .epbutton {
+    background-color: var(--orange);
+    color: var(--black);
+    font-size: 25px;
+    font-weight: 600;
+    padding: 15px 50px;
+    border-radius: 10px;
+    margin: 5vw;
+}
+
+.epbuttons .epbutton.active:hover {
+    opacity: 70%;
+}
+
+.notactive {
+    opacity: 70%;
+}
+
+.team {
+    background-image: url(img/Sfondi/03_messy_crazy_world_sfumata.jpg);
+}
+
+.wrapper {
+    display: flex;
+    max-width: 650px;
+    width: 100%;
+    height: 400px;
+    background: #fff;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 12px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+.wrapper i.arrowbutton {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  height: 36px;
+  width: 36px;
+  background-color: var(--black);
+  border-radius: 50%;
+  text-align: center;
+  line-height: 36px;
+  color: var(--white);
+  font-size: 15px;
+  transition: all 0.3s linear;
+  z-index: 100;
+  cursor: url('img/pointer.png'), pointer;
+}
+
+i.arrowbutton:active {
+  transform: scale(0.94) translateY(-50%);
+}
+
+i#prev {
+  left: 25px;
+}
+
+i#next {
+  right: 25px;
+}
+
+.image-container {
+  height: 320px;
+  max-width: 500px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.image-container .epcarousel {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  transition: all 0.4s ease;
+}
+
+.epcarousel img {
+  height: 100%;
+  width: 100%;
+  border-radius: 50%;
+  /* border: 10px solid #fff; */
+  object-fit: cover;
+}
+
+video.episode {
+    width: 100vw;
+    height: 80vh;
+}
+
+.team h1 {
+    font-size: var(--text-300);
+    margin-bottom: 20px;
+    color: var(--orange);
+}
+
+.team p {
+  font-size: var(--text-200);
+  margin-bottom: 40px;
+  color: var(--orange);
+}
+
+.teamsection {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.team-member {
+  margin: 10px;
+  text-align: center;
+}
+
+.team-member img {
+  width: 150px;
+  height: 150px;
+  /* border-radius: 50%; */
+  margin-bottom: 10px;
+}
+
+.team-member p {
+  margin: 0;
+}
+
+.list .active {
+    color: var(--orange);
+}
+
+.logohover {
+    display: none;
+}
+
+.team .teamsection .team-member {
+    background-color: transparent;
+    border: none;
+    width: 400px;
+    height: 400px;
+}
+
+.team .teamsection .team-member img {
+    object-fit: none;
+}
+
+.teamtitle {
+    margin-top: 20vh;
+    margin-left: 10vh;
+}
+
+#team {
+    display: block;
+}
