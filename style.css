@@ -42,7 +42,7 @@ a:hover {
   
 .home-section {
   background-size: 101vw;
-  background-image: url('img/Sfondi/03_messy_crazy_world_sfumata.jpg');
+  background-image: url('img/Sfondi/02\ meta2024\ sfumata.jpg');
   /* Aggiungi altre regole di stile se necessario */
   background-repeat: no-repeat;
 }
@@ -415,7 +415,7 @@ ul {
 .bold {
   width: 50vw;
   font-weight: 800;
-  font-size: var(--text-300);
+  font-size: var(--text-300) !important;
 }
 
 .diary .container {
@@ -445,10 +445,11 @@ ul {
 }
 
 .meta {
-    background-image: url('img/Sfondi/02\ meta2024\ sfumata.jpg');
+    /* background-image: url('img/Sfondi/02\ meta2024\ sfumata.jpg');
     background-repeat: no-repeat;
     background-position: cover;
-    background-size: 101vw;
+    background-size: 101vw; */
+    background-color: var(--black);
 }
 
 .coverdiary {
@@ -487,7 +488,6 @@ ul {
     height: 20vh;
     align-items: flex-end;
 }
-
   
 /* .team, .identity {
     background-color: var(--blackbg);
@@ -528,7 +528,7 @@ ul {
 .section .cover {
     width: 382px;
     height: 400px;
-    background-image: url(/img/Backstage/backstage-07.jpg);
+    background-image: url(img/Backstage/backstage-07.jpg);
     background-size: cover;
     border-radius: 10px;
     background-position: center center;
@@ -638,7 +638,7 @@ ul {
 }
 
 .epcontainer .epslider, .epcontainer .epvideo {
-    height: 80vh;
+    height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -649,7 +649,7 @@ ul {
     justify-content: center;
     align-items: center;
     height: 20vh;
-    width: 100vw;
+    width: 80vw;
 }
 
 .epbuttons .epbutton {
@@ -672,14 +672,17 @@ ul {
 
 .team {
     background-image: url(img/Sfondi/03_messy_crazy_world_sfumata.jpg);
+    background-repeat: no-repeat;
+    background-position: cover;
+    background-size: 101vw;
 }
 
 .wrapper {
     display: flex;
-    max-width: 650px;
-    width: 100%;
-    height: 400px;
-    background: #fff;
+    max-width: 1920px;
+    width: 1920px;
+    height: 1080px;
+    background: transparent;
     align-items: center;
     justify-content: center;
     position: relative;
@@ -717,30 +720,29 @@ i#next {
 }
 
 .image-container {
-  height: 320px;
-  max-width: 500px;
-  width: 100%;
+  max-width: 1920px;
+  width: 1920px;
+  height: 1080px;
   overflow: hidden;
 }
 
 .image-container .epcarousel {
   display: flex;
-  height: 100%;
-  width: 100%;
+  width: 1920px;
+  height: 1080px;
   transition: all 0.4s ease;
 }
 
 .epcarousel img {
-  height: 100%;
-  width: 100%;
-  border-radius: 50%;
+    margin-top: 3vh;
+    width: 1920px;
+    height: 1080px;
   /* border: 10px solid #fff; */
-  object-fit: cover;
 }
 
 video.episode {
     width: 100vw;
-    height: 80vh;
+    height: 100vh;
 }
 
 .team h1 {
@@ -803,4 +805,22 @@ video.episode {
 
 #team {
     display: block;
+}
+
+.listep {
+    background: transparent;
+}
+
+.metacontent .diaryitems img {
+    width: 101vw;
+    height: auto;
+}
+
+.inizio img, .pvp img, .research img, .hermes img {
+    width: 101vw;
+    height: auto;
+}
+
+.inizio, .pvp, .research, .hermes {
+    background-color: var(--black);
 }

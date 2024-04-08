@@ -6,7 +6,6 @@ logo.addEventListener("click", () => {
 }); */
 
 // popup
-// popup
 document.addEventListener("DOMContentLoaded", function () {
   document.addEventListener("click", (e) => {
       if (e.target.classList.contains("showdescription")) {
@@ -126,17 +125,16 @@ document.addEventListener('DOMContentLoaded', function () {
     
     // Array to store text for each team member
     var teamMemberText = [
-      '<img class="coverdiary" src="img/Diario/giorno 1_page-0001.jpg"></img>',
-      '<img class="coverdiary" src="img/Diario/giorno 2_page-0001.jpg"></img>',
-      '<img class="coverdiary" src="img/Diario/giorno 3_page-0001.jpg"></img>',
-      '<img class="coverdiary" src="img/Diario/giorno 4_page-0001.jpg"></img>',
-      '<img class="coverdiary" src="img/Diario/giorno 5_page-0001.jpg"></img>',
-      '<img class="coverdiary" src="img/Diario/giorno 6_page-0001.jpg"></img>',
-      '<img class="coverdiary" src="img/Diario/giorno 7_page-0001.jpg"></img>',
-      '<img class="coverdiary" src="img/Diario/giorno 8_page-0001.jpg"></img>',
-      '<img class="coverdiary" src="img/Diario/giorno 9_page-0001.jpg"></img>',
-      '<img class="coverdiary" src="img/Diario/giorno 10_page-0001.jpg"></img>',
-      
+      '<img class="coverdiary" src="img/Diario/01.jpg"></img>',
+      '<img class="coverdiary" src="img/Diario/02.jpg"></img>',
+      '<img class="coverdiary" src="img/Diario/03.jpg"></img>',
+      '<img class="coverdiary" src="img/Diario/04.jpg"></img>',
+      '<img class="coverdiary" src="img/Diario/05.jpg"></img>',
+      '<img class="coverdiary" src="img/Diario/06.jpg"></img>',
+      '<img class="coverdiary" src="img/Diario/07.jpg"></img>',
+      '<img class="coverdiary" src="img/Diario/08.jpg"></img>',
+      '<img class="coverdiary" src="img/Diario/09.jpg"></img>',
+      '<img class="coverdiary" src="img/Diario/10.jpg"></img>',
       // Add text for other team members here
     ];
     
@@ -169,56 +167,57 @@ document.addEventListener('DOMContentLoaded', function () {
 
 //playbutton hover
 const start1 = document.querySelector('.start1'),
-start2 = document.querySelector('.start2'),
-start3 = document.querySelector('.start3'),
-start4 = document.querySelector('.start4'),
-start5 = document.querySelector('.start5'),
-image1 = document.querySelector('.image1'),
-image2 = document.querySelector('.image2'),
-image3 = document.querySelector('.image3'),
-image4 = document.querySelector('.image4'),
-image5 = document.querySelector('.image5');
+            start2 = document.querySelector('.start2'),
+            start3 = document.querySelector('.start3'),
+            start4 = document.querySelector('.start4'),
+            start5 = document.querySelector('.start5'),
+            image1 = document.querySelector('.image1'),
+            image2 = document.querySelector('.image2'),
+            image3 = document.querySelector('.image3'),
+            image4 = document.querySelector('.image4'),
+            image5 = document.querySelector('.image5');
 
 image1.addEventListener("mouseover", () => {
-start1.classList.add('start-block');
+  start1.classList.add('start-block');
 });
 
 image1.addEventListener("mouseleave", () => {
-start1.classList.remove('start-block');
+  start1.classList.remove('start-block');
 });
 
 image2.addEventListener("mouseover", () => {
-start2.classList.add('start-block');
+  start2.classList.add('start-block');
 });
 
 image2.addEventListener("mouseleave", () => {
-start2.classList.remove('start-block');
+  start2.classList.remove('start-block');
 });
 
 image3.addEventListener("mouseover", () => {
-start3.classList.add('start-block');
+  start3.classList.add('start-block');
 });
 
 image3.addEventListener("mouseleave", () => {
-start3.classList.remove('start-block');
+  start3.classList.remove('start-block');
 });
 
 image4.addEventListener("mouseover", () => {
-start4.classList.add('start-block');
+  start4.classList.add('start-block');
 });
 
 image4.addEventListener("mouseleave", () => {
-start4.classList.remove('start-block');
+  start4.classList.remove('start-block');
 });
 
 image5.addEventListener("mouseover", () => {
-start5.classList.add('start-block');
+  start5.classList.add('start-block');
 });
 
 image5.addEventListener("mouseleave", () => {
-start5.classList.remove('start-block');
+  start5.classList.remove('start-block');
 });
 
+/* metabutton */
 const metacontent = document.querySelector('.metacontent'),
             metabutton = document.querySelector('.metabutton');
 
@@ -250,3 +249,15 @@ logoHover.addEventListener("mouseleave", () => {
 if (blinkvoice.classList.contains('active')){
   blinkvoice.innerHTML = '<img src="/img/logoHover.png" class="logo"></img>';
 }; */
+
+/* const prevScrollpos = window.scrollY;
+window.onscroll = function() {
+const currentScrollPos = window.scrollY;
+  if (prevScrollpos > currentScrollPos) {
+    document.querySelector(".list").style.display = "block";
+    console.log('ccc');
+  } else {
+    document.querySelector(".list").style.display = "none";
+  }
+  prevScrollpos = currentScrollPos;
+} */
